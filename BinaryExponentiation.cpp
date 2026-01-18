@@ -1,23 +1,20 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int x =2;
-    int n=2;
-double y=x;
-        if(n>0){
-            for(int i=1;i<n;i++){
-            double s = (y*x);
-            y = s;
+      long BF =n;
+        double ans=1;
+        if(n<0){
+            x =1/x;
+            BF= -BF;
         }
-            cout<< x;}
-        else if(n<0){
-            for(int i=1;i<(-n);i++){
-                double s = (y*x);
-                y=s;
+        while(BF>0){
+            if(BF%2==1){
+                ans *=x;
+                
             }
-            cout<<(1/y);
+            x *=x;
+            BF/=2;
         }
-        else{
-            cout<< 1;
-        }
+        return ans;
+    }
     }
